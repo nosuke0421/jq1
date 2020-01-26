@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="ResetStylesheet.css">
+  <link rel="stylesheet" href="stylesheet.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho&display=swap&subset=japanese" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery練習</title>
+</head>
+
+<body>
+  <header>
+    <img class="logo" src="icon.png" alt="">
+    <div class="header-name">
+      大学院生ブロガーくま
+    </div>
+  </header>
+
+  <div class="wrapper">
+    <h1 class="topic">jQueryとは</h1>
+    <div class="btn" id="btn0">
+      クリック！
+    </div>
+    <div id="hide-area0" class="hide">
+      <img class="image" src="pc.jpg" alt="">
+      <div class="comment">
+        <h2>ページに動きをつける</h2>jQueryとはjavascriptのライブラリ。webページにアニメーションや効果などの動きをつけることができる。
+      </div>
+    </div>
+  </div>
+
+  <div class="p-wrapper">
+    <h1 class="topic">jQueryの練習</h1>
+    <div class="practice">
+      <h2>fadeInで表示</h2>
+      <div class="btn" id="btn1">
+        クリック！
+      </div>
+      <div class="hide" id=hide-area1>
+        <div class="comment">
+          $('セレクタ').fadeIn()
+        </div>
+      </div>
+    </div>
+    <div class="practice">
+      <h2>fadeOutで非表示</h2>
+      <div class="btn" id="btn2">
+        クリック！
+      </div>
+      <div id=appear-area0>
+        <div class="comment">
+          $('セレクタ').fadeOut()
+        </div>
+      </div>
+    </div>
+    <div class="practice">
+      <h2>slideOutで非表示</h2>
+      <div class="btn" id="btn3">
+        クリック！
+      </div>
+      <div id=appear-area1>
+        <div class="comment">
+          $('セレクタ').slideUp()
+        </div>
+      </div>
+    </div>
+    <div class="practice">
+      <h2>slideDownで表示</h2>
+      <div class="btn" id="btn4">
+        クリック！
+      </div>
+      <div class = "hide" id=hide-area2>
+        <div class="comment">
+          $('セレクタ').slideDown()
+        </div>
+      </div>
+    </div>
+    <div class="practice">
+      <h2>showで表示</h2>
+      <div class="btn" id="btn5">
+        クリック！
+      </div>
+      <div class = "hide" id=hide-area3>
+        <div class="comment">
+          $('セレクタ').show()
+        </div>
+      </div>
+    </div>
+    <div class="practice">
+      <h2>hideで非表示</h2>
+      <div class="btn" id="btn6">
+        クリック！
+      </div>
+      <div id=appear-area2>
+        <div class="comment">
+          $('セレクタ').hide()
+        </div>
+      </div>
+    </div>
+
+    <div class="practice2">
+      <h2>findで子要素を取得</h2>
+      <div class="comment">
+        <p>指定したセレクタの子要素すべてが対象</p>
+        <p>$('セレクタ').find('セレクタ')</p>
+      </div>
+      <div class="btn" id="btn7">
+        クリック
+      </div>
+      <div class="parent">
+        <p>ここは子供</p>
+        <div class="child">
+          <p>ここは孫</p>
+          <div class="grandchild">
+            <p>ここはひ孫</p>
+          </div>
+        </div>
+        <div class="child">
+          <p>ここは孫</p>
+        </div>
+        <div class="child">
+          <p>ここは孫</p>
+        </div>
+      </div>
+
+      <h2>childrenで子要素を取得</h2>
+      <div class="comment">
+        <p>指定したセレクタのひとつ下にある子要素（孫まで行かない）の一番上を取得</p>
+        <p>$('セレクタ').find('セレクタ')</p>
+      </div>
+      <div class="btn" id="btn8">
+        クリック
+      </div>
+      <div class="parent2">
+        <p>ここは子供</p>
+        <div class="child2">
+          <p>ここは孫</p>
+          <div class="grandchild2">
+            <p>ここはひ孫</p>
+          </div>
+        </div>
+        <div class="child2">
+          <p>ここは子供</p>
+        </div>
+        <div class="child2">
+          <p>ここは子供</p>
+        </div>
+      </div>
+
+      <h2>マウスが載っているときの動作を指定するhover</h2>
+      <div class="comment">
+        <p>マウスが乗っているときの処理は.hover()で書ける</p>
+      </div>
+        <div class="hv">
+          ここにマウスを乗せたり離したりしてみて！
+          <div class="hide" id="appear">
+            ありがとう！！
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <footer>
+    <img class="logo" src="icon.png" alt="">
+    <div class="header-name">
+      大学院生ブロガーくま
+    </div>
+  </footer>
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>
